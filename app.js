@@ -71,19 +71,22 @@ $('#submit-button').click(function(event){
     duration: $('#textarea5').val()===""?undefined:$('#textarea5').val()
   };
 
-console.log(data);
+  console.log(data);
 
 
 
-var settings = {
-  "url": `https://morning-brook-36057.herokuapp.com/movies/${pageID}`,
-  "method": "PUT",
-  "data":data
-}
+  var settings = {
+    "url": `https://morning-brook-36057.herokuapp.com/movies/${pageID}`,
+    "method": "PUT",
+    "data":data
+  }
 
-$.ajax(settings).done(function (response) {
-  console.log(response);
-});
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+    window.location.href='./index.html';
+  });
+
+
 
 });
 
